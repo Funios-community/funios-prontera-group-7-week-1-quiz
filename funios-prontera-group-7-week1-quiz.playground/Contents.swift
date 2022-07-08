@@ -89,14 +89,27 @@ default :
 /*
  Manipulasi array berikut agar dapat mengeluarkan output sesuai yang ditentukan
  */
-let kumpulanAngka: [Int]!
+//let kumpulanAngka: [Int]!
+
+//kumpulanAngka = [235, 212, 23]
+//kumpulanAngka.append(contentsOf: 10)
+
+//print("Saya memiliki kumpulan yang berisi ... angka acak")
+//for ... in kumpulanAngka {
+  //  print("Diurutan ke-?? valuenya ??")
+//}
+
+// dari sini saya sebenernya belum paham arti ! dalam integer ini
+var kumpulanAngka: [Int]!
 
 kumpulanAngka = [235, 212, 23]
-kumpulanAngka.append(contentsOf: 10)
+kumpulanAngka.append(contentsOf: [10])
 
-print("Saya memiliki kumpulan yang berisi ... angka acak")
-for ... in kumpulanAngka {
-    print("Diurutan ke-?? valuenya ??")
+//dari sini berarti kumpulan Angka [235,212,23,10] hasilnya berisi 4 angka acak dan bukan 5. mohon dikoreksi jika salah
+print("Saya memiliki kumpulan yang berisi \(kumpulanAngka.count) angka acak")
+// ada 4 angka, sehingga akan keluar index 0-3)
+for (index, value) in kumpulanAngka.enumerated() {
+    print("Diurutan ke-\(index) valuenya \(value)")
 }
 
 /* SUCCESS Parameter:
