@@ -47,8 +47,8 @@ case 60:
 /* SUCCESS Parameter: Jika {nilai} diganti dengan angka tertentu akan mengeluarkan output yang sesuai dengan kondisi */
 
 // MARK: Quiz 3
-/* Tambahkan
- 
+/*
+ Manipulasi array berikut agar dapat mengeluarkan output sesuai yang ditentukan
  */
 let kumpulanAngka: [Int]!
 
