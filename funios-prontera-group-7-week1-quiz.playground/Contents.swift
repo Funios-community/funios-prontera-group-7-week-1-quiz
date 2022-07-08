@@ -7,7 +7,7 @@ let nama = "Samtoso"
 let umur = "20"
 let tinggiBadan = "180cm"
 
-nama = ""
+nama = "Burhan"
 
 let umurDuaTahunLalu = umur - 2
 let tinggiBadanDibagiTiga = tinggiBadan / 3.2
