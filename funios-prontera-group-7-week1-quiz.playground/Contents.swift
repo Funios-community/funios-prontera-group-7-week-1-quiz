@@ -38,25 +38,49 @@ print("Halo, nama saya \(nama), dua tahun lalu saya berumur \(umurDuaTahunLalu) 
  Jika nilai 70-79 mendapatkan nilai C.
  Jika nilai dibawah 69 mendapatkan nilai D.
  */
-let nilai = 90
+//let nilai = 90
 
-if nilai < 70 {
-    print("Kamu mendapatkan nilai D")
-} else if nilai > 70 {
-    print("Kamu mendapatkan nilai C")
+//if nilai < 70 {
+  //  print("Kamu mendapatkan nilai D")
+//} else if nilai > 70 {
+  //  print("Kamu mendapatkan nilai C")
+//} else {
+  //  print("Kamu mendapatkan nilai B")
+//} else if nilai > 90  {
+  //  print("Kamu mendapatkan nilai A")
+//}
+
+//switch nilai {
+//case 70:
+  //  print("Kamu mendapatkan nilai D")
+//case 90:
+  //  print("Kamu mendapatkan nilai D")
+//case 60:
+  //  print("Kamu mendapatkan nilai D")
+//}
+
+let nilai = 70
+//mencoba merapikan untuk yang if else
+if nilai >= 90 {
+    print("mendapatkan nilai A")
+} else if nilai >= 80 {
+    print("mendapatkan nilai B")
+} else if nilai >= 70 {
+    print("mendapatkan nilai C")
 } else {
-    print("Kamu mendapatkan nilai B")
-} else if nilai > 90  {
-    print("Kamu mendapatkan nilai A")
+    print("mendapatkan nilai D")
 }
 
+// untuk hasil switch kondisinya harus sama dengan if else
 switch nilai {
-case 70:
-    print("Kamu mendapatkan nilai D")
-case 90:
-    print("Kamu mendapatkan nilai D")
-case 60:
-    print("Kamu mendapatkan nilai D")
+case 90...100:
+    print("mendapatkan nilai A")
+case 80...89:
+    print("mendapatkan nilai B")
+case 70...79:
+    print("mendapatkan nilai C")
+default :
+    print ("mendapatkan nilai D")
 }
 
 /* SUCCESS Parameter: Jika {nilai} diganti dengan angka tertentu akan mengeluarkan output yang sesuai dengan kondisi */
