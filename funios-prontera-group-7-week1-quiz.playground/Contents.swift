@@ -2,15 +2,30 @@ import UIKit
 
 // MARK: Quiz 1
 /*  Fix the error */
+//let nama = "Samtoso"
+//let umur = "20"
+//let tinggiBadan = "180cm"
 
-let nama = "Samtoso"
-let umur = "20"
-let tinggiBadan = "180cm"
+//nama = ""
 
-nama = ""
+//let umurDuaTahunLalu = umur - 2
+//let tinggiBadanDibagiTiga = tinggiBadan / 3.2
 
+// merubah let nama ke var karena agar bisa dirubah ke burhan, umur butuh dirubah ke type Int yang dari semula string pakai casting, tinggi badan juga butuh dirubah ke type double pakai casting juga
+var nama = "Samtoso"
+let umur : Int = 20
+let tinggiBadan : Double = 180.0
+
+nama = "Burhan"
+
+//agar bisa berumur 18 tahun sudah dipastikan umur sudah Int bukan lagi string
 let umurDuaTahunLalu = umur - 2
+
+//Hasilnya 56.25 maka 180.0 dibagi 3.2
 let tinggiBadanDibagiTiga = tinggiBadan / 3.2
+
+//PrintResult
+print("Halo, nama saya \(nama), dua tahun lalu saya berumur \(umurDuaTahunLalu) tahun, tinggi saya jika dibagi 3 adalah \(tinggiBadanDibagiTiga) cm")
 
 /* SUCCESS Parameter: bisa Print output `Halo, nama saya Burhan, dua tahun lalu saya berumur 18 tahun, tinggi saya jika dibagi 3 adalah 56.25 cm` */
 
