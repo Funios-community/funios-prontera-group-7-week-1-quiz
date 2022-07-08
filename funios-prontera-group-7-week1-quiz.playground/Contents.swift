@@ -73,11 +73,11 @@ for ... in kumpulanAngka {
 /* Quiz 4
  FunIos
  Jika bisa dibagi 3: Print = Fun
- Jika bisa dibagi 5: Print = Ios
- Jika bisa dibagi 3 & 5: Print = FunIos
+ Jika bisa dibagi 5: Print = iOS
+ Jika bisa dibagi 3 & 5: Print = FuniOS
  */
 
-func funIos(total: Int?) {
+func funiOS(total: Int?) {
     for .... in .... {
         if .. {
             print("Fun")
@@ -87,4 +87,28 @@ func funIos(total: Int?) {
 
 print(funIos(total: 100))
 
-/* SUCCESS Parameter: Print 100 angka/text sesuai dengan kondisi yang ditentukan */
+/* SUCCESS Parameter: Print 100 angka/text sesuai dengan kondisi yang ditentukan
+ Print output example:
+ 1
+ 2
+ Fun
+ 4
+ iOS
+ Fun
+ 7
+ 8
+ Fun
+ iOS
+ 11
+ Fun
+ 13
+ 14
+ FuniOS
+ 16
+ ..
+ ....
+ .....
+ ......
+ dst..
+ */
+.
