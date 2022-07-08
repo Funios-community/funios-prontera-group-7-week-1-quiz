@@ -107,7 +107,7 @@ kumpulanAngka.append(contentsOf: [10])
 
 //dari sini berarti kumpulan Angka [235,212,23,10] hasilnya berisi 4 angka acak dan bukan 5. mohon dikoreksi jika salah
 print("Saya memiliki kumpulan yang berisi \(kumpulanAngka.count) angka acak")
-// ada 4 angka, sehingga akan keluar index 0-3)
+// ada 4 angka, sehingga akan keluar index 0-3
 for (index, value) in kumpulanAngka.enumerated() {
     print("Diurutan ke-\(index) valuenya \(value)")
 }
@@ -129,15 +129,37 @@ for (index, value) in kumpulanAngka.enumerated() {
  Jika bisa dibagi 3 & 5: Print = FuniOS
  */
 
-func funiOS(total: Int?) {
-    for .... in .... {
-        if .. {
-            print("Fun")
-        }
+//func funiOS(total: Int?) {
+  //  for .... in .... {
+    //    if .. {
+      //      print("Fun")
+        //}
+    //}
+//}
+
+//print(funIos(total: 100))
+
+// info dari error untuk tidak menggunakan ?, dan 1...total sesuai dengan parameter function
+func funiOS(total: Int) {
+    for i in 1...total {
+        //jika bisa dibagi 5 dan bisa dibagi 3 maka FuniOS, kalo ga bisa dibagi 3 aka bisa dibagi 5 maka iOS
+     if i % 5 == 0 {
+         if i % 3 == 0 {
+    print("FuniOS")
+     } else {
+          print("iOS")
+     }
+         //kalo bisa dibagi 3 akan muncul Fun
+     } else if i % 3 == 0 {
+        print("Fun")
+         //selebihnya berupa angka
+     } else {
+         print(i)
+     }
     }
 }
-
-print(funIos(total: 100))
+// dijalankan sesuai function, karena udah ada print didalam functionnya
+funiOS(total: 100)
 
 /* SUCCESS Parameter: Print 100 angka/text sesuai dengan kondisi yang ditentukan
  Print output example:
