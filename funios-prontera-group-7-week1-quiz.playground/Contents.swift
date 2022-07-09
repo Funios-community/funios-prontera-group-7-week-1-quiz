@@ -59,14 +59,14 @@ default:
 /*
  Manipulasi array berikut agar dapat mengeluarkan output sesuai yang ditentukan
  */
-let kumpulanAngka: [Int]!
+var kumpulanAngka: [Int]!
 
 kumpulanAngka = [235, 212, 23]
-kumpulanAngka.append(contentsOf: 10)
+kumpulanAngka.append(contentsOf: [10, 123, 987, 1730])
 
-print("Saya memiliki kumpulan yang berisi ... angka acak")
-for ... in kumpulanAngka {
-    print("Diurutan ke-?? valuenya ??")
+print("Saya memiliki kumpulan yang berisi \(kumpulanAngka.count) angka acak")
+for (index, value) in kumpulanAngka.enumerated() {
+    print("Diurutan ke-\(index) valuenya \(value)")
 }
 
 /* SUCCESS Parameter:
