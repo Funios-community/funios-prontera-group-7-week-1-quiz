@@ -3,14 +3,17 @@ import UIKit
 // MARK: Quiz 1
 /*  Fix the error */
 
-let nama = "Samtoso"
+var nama = "Samtoso"
 let umur = "20"
-let tinggiBadan = "180cm"
+var tinggiBadan = "180cm"
 
-nama = ""
+nama = "Burhan"
+tinggiBadan = "168.75cm"
 
-let umurDuaTahunLalu = umur - 2
-let tinggiBadanDibagiTiga = tinggiBadan / 3.2
+let umurDuaTahunLalu = Int(umur)! - 2
+let tinggiBadanDibagiTiga = Double(tinggiBadan.replacingOccurrences(of: "cm", with: ""))! / 3
+
+print("Halo, nama saya \(nama), dua tahun lalu saya berumur \(umurDuaTahunLalu) tahun, tinggi saya jika dibagi 3 adalah 56.25 cm")
 
 /* SUCCESS Parameter: bisa Print output `Halo, nama saya Burhan, dua tahun lalu saya berumur 18 tahun, tinggi saya jika dibagi 3 adalah 56.25 cm` */
 
