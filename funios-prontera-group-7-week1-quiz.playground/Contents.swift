@@ -28,23 +28,29 @@ print("Halo, nama saya \(nama), dua tahun lalu saya berumur \(umurDuaTahunLalu) 
  */
 let nilai = 90
 
-if nilai < 70 {
-    print("Kamu mendapatkan nilai D")
-} else if nilai > 70 {
-    print("Kamu mendapatkan nilai C")
-} else {
-    print("Kamu mendapatkan nilai B")
-} else if nilai > 90  {
+if (90...100).contains(nilai) {
     print("Kamu mendapatkan nilai A")
+} else if (80...89).contains(nilai) {
+    print("Kamu mendapatkan nilai B")
+} else if (70...79).contains(nilai) {
+    print("Kamu mendapatkan nilai C")
+} else if (0...69).contains(nilai) {
+    print("Kamu mendapatkan nilai D")
+} else {
+    print("Nilai yang kamu masukkan salah")
 }
 
 switch nilai {
-case 70:
+case 90...100:
+    print("Kamu mendapatkan nilai A")
+case 80...89:
+    print("Kamu mendapatkan nilai B")
+case 70...79:
+    print("Kamu mendapatkan nilai C")
+case 0...69:
     print("Kamu mendapatkan nilai D")
-case 90:
-    print("Kamu mendapatkan nilai D")
-case 60:
-    print("Kamu mendapatkan nilai D")
+default:
+    print("Nilai yang kamu masukkan salah")
 }
 
 /* SUCCESS Parameter: Jika {nilai} diganti dengan angka tertentu akan mengeluarkan output yang sesuai dengan kondisi */
