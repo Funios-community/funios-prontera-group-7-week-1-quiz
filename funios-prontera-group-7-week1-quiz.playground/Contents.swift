@@ -86,15 +86,30 @@ for (index, value) in kumpulanAngka.enumerated() {
  Jika bisa dibagi 3 & 5: Print = FuniOS
  */
 
-func funiOS(total: Int?) {
-    for .... in .... {
-        if .. {
-            print("Fun")
+func funiOS(total: Int) {
+ 
+    
+    for i in 1...total {
+        var res = String(i)
+        
+        if i%3 == 0 {
+            res = "Fun"
         }
+
+        if i%5 == 0 {
+            res = "iOS"
+        }
+
+        if i%3 == 0 && i%5 == 0 {
+            res = "FuniOS"
+        }
+
+        
+        print(res)
     }
 }
 
-print(funIos(total: 100))
+funiOS(total: 100)
 
 /* SUCCESS Parameter: Print 100 angka/text sesuai dengan kondisi yang ditentukan
  Print output example:
