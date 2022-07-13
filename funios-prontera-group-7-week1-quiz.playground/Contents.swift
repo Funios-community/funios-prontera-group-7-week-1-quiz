@@ -13,7 +13,7 @@ tinggiBadan = "168.75cm"
 let umurDuaTahunLalu = Int(umur)! - 2
 let tinggiBadanDibagiTiga = Double(tinggiBadan.replacingOccurrences(of: "cm", with: ""))! / 3
 
-print("Halo, nama saya \(nama), dua tahun lalu saya berumur \(umurDuaTahunLalu) tahun, tinggi saya jika dibagi 3 adalah 56.25 cm")
+print("Halo, nama saya \(nama), dua tahun lalu saya berumur \(umurDuaTahunLalu) tahun, tinggi saya jika dibagi 3 adalah \(tinggiBadanDibagiTiga) cm")
 
 /* SUCCESS Parameter: bisa Print output `Halo, nama saya Burhan, dua tahun lalu saya berumur 18 tahun, tinggi saya jika dibagi 3 adalah 56.25 cm` */
 
