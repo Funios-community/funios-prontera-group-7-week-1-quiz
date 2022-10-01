@@ -3,16 +3,18 @@ import UIKit
 // MARK: Quiz 1
 /*  Fix the error */
 
-let nama = "Samtoso"
-let umur = "20"
-let tinggiBadan = "180cm"
+var nama = "Samtoso"
+let umur = 20
+let tinggiBadan = 180
 
 nama = ""
 
 let umurDuaTahunLalu = umur - 2
-let tinggiBadanDibagiTiga = tinggiBadan / 3.2
+let tinggiBadanDibagiTiga = Double(tinggiBadan) / 3.2
 
 /* SUCCESS Parameter: bisa Print output `Halo, nama saya Burhan, dua tahun lalu saya berumur 18 tahun, tinggi saya jika dibagi 3 adalah 56.25 cm` */
+nama = "Burhan"
+print("Halo, nama saya \(nama), dua tahun lalu saya berumur \(umur) tahun, tinggi saya jika dibagi 3 adalah \(tinggiBadanDibagiTiga) cm")
 
 // MARK: Quiz 2
 /*
@@ -25,22 +27,24 @@ let tinggiBadanDibagiTiga = tinggiBadan / 3.2
  */
 let nilai = 90
 
-if nilai < 70 {
-    print("Kamu mendapatkan nilai D")
-} else if nilai > 70 {
-    print("Kamu mendapatkan nilai C")
-} else {
-    print("Kamu mendapatkan nilai B")
-} else if nilai > 90  {
+if nilai > 89 {
     print("Kamu mendapatkan nilai A")
+} else if nilai > 79 {
+    print("Kamu mendapatkan nilai B")
+} else if nilai > 69 {
+    print("Kamu mendapatkan nilai C")
+} else if nilai <= 69  {
+    print("Kamu mendapatkan nilai D")
 }
 
 switch nilai {
-case 70:
-    print("Kamu mendapatkan nilai D")
-case 90:
-    print("Kamu mendapatkan nilai D")
-case 60:
+case 90...100:
+    print("Kamu mendapatkan nilai A")
+case 80...89:
+    print("Kamu mendapatkan nilai B")
+case 70...79:
+    print("Kamu mendapatkan nilai C")
+default:
     print("Kamu mendapatkan nilai D")
 }
 
@@ -50,14 +54,14 @@ case 60:
 /*
  Manipulasi array berikut agar dapat mengeluarkan output sesuai yang ditentukan
  */
-let kumpulanAngka: [Int]!
+var kumpulanAngka: [Int]!
 
 kumpulanAngka = [235, 212, 23]
-kumpulanAngka.append(contentsOf: 10)
+kumpulanAngka.append(contentsOf: [24, 27])
 
 print("Saya memiliki kumpulan yang berisi ... angka acak")
-for ... in kumpulanAngka {
-    print("Diurutan ke-?? valuenya ??")
+for (index, element) in kumpulanAngka.enumerated() {
+    print("Diurutan ke-\(index) valuenya \(element)")
 }
 
 /* SUCCESS Parameter:
@@ -78,14 +82,32 @@ for ... in kumpulanAngka {
  */
 
 func funiOS(total: Int?) {
-    for .... in .... {
-        if .. {
+    guard let totalNotNil = total else {
+        print("Please input a number")
+        return
+    }
+    
+    var array = [Int]()
+    
+    for i in 0...totalNotNil {
+        array.append(i)
+    }
+    
+    for angka in array {
+        switch true {
+        case angka % 3 == 0 && angka % 5 == 0:
+            print("FuniOS")
+        case angka % 3 == 0:
             print("Fun")
+        case angka % 5 == 0:
+            print("iOS")
+        default:
+            print(angka)
         }
     }
 }
+funiOS(total: 100)
 
-print(funIos(total: 100))
 
 /* SUCCESS Parameter: Print 100 angka/text sesuai dengan kondisi yang ditentukan
  Print output example:
@@ -111,4 +133,5 @@ print(funIos(total: 100))
  ......
  dst..
  */
+
 
